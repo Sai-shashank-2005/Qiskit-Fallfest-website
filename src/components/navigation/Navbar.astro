@@ -86,15 +86,19 @@
       const isDark = document.documentElement.getAttribute("data-theme") === "dark";
       const newTheme = isDark ? "light" : "dark";
       
-      // Fallback for browsers that do not support View Transitions API
-      if (!document.startViewTransition) {
+      // Fallback for browsers that do not support View Transitions API or if reduced motion is requested
+      if (!document.startViewTransition || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.documentElement.classList.add('theme-fallback');
         updateTheme(newTheme);
+        setTimeout(() => {
+          document.documentElement.classList.remove('theme-fallback');
+        }, 500);
         return;
       }
       
-      // Calculate circle animation radius
-      const x = e.clientX;
-      const y = e.clientY;
+      // Calculate circle animation radius - Handle touch/mobile clicks carefully
+      const x = e.clientX !== undefined ? e.clientX : window.innerWidth / 2;
+      const y = e.clientY !== undefined ? e.clientY : window.innerHeight / 2;
       const endRadius = Math.hypot(
         Math.max(x, innerWidth - x),
         Math.max(y, innerHeight - y)

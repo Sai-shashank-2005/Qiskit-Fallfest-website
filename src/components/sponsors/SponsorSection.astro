@@ -1,6 +1,15 @@
 ---
 // SponsorSection component
 ---
+<style>
+  @keyframes slideShine {
+    0% { transform: translateX(-150%) skewX(-20deg); }
+    100% { transform: translateX(250%) skewX(-20deg); }
+  }
+  .group:hover .shine-effect {
+    animation: slideShine 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  }
+</style>
 
 <section class="py-32 relative overflow-hidden bg-transparent">
   <div class="container mx-auto px-6 max-w-5xl relative z-10">
@@ -18,10 +27,9 @@
     <div class="grid md:grid-cols-2 gap-8 items-center justify-center">
       
       <!-- Technology Partner: IBM Quantum -->
-      <div class="group relative bg-surface/40 backdrop-blur-xl border border-white/10 p-10 rounded-3xl hover:bg-surface/60 transition-all duration-500 overflow-hidden flex flex-col items-center justify-center h-56 sm:h-64 shadow-lg hover:shadow-2xl">
-        <!-- Hover Glow -->
-        <div class="absolute inset-0 bg-gradient-to-br from-[#ff4d80]/0 to-[#ff4d80]/0 group-hover:from-[#ff4d80]/5 group-hover:to-transparent transition-colors duration-500"></div>
-        <div class="absolute -inset-[1px] bg-gradient-to-r from-[#ff4d80]/50 to-[#b45bfa]/50 rounded-3xl blur-sm opacity-0 group-hover:opacity-100 transition duration-500 pointer-events-none -z-10"></div>
+      <div class="group relative bg-surface/40 backdrop-blur-xl border border-white/10 p-10 rounded-3xl transition-all duration-500 overflow-hidden flex flex-col items-center justify-center h-56 sm:h-64 shadow-lg hover:shadow-2xl hover:-translate-y-1 hover:border-white/20 hover:bg-surface/50">
+        <!-- Animated Shine -->
+        <div class="shine-effect absolute inset-0 w-2/3 h-full bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-[150%] skew-x-[-20deg] pointer-events-none z-0"></div>
         
         <span class="absolute top-6 left-8 text-[10px] uppercase tracking-[0.25em] text-[#ff4d80] font-bold opacity-80 group-hover:opacity-100 transition-opacity">Technology Partner</span>
         
@@ -33,10 +41,9 @@
       </div>
       
       <!-- Platform Partner: Qryptex -->
-      <a href="https://qryptex.in" target="_blank" rel="noopener noreferrer" class="group relative bg-surface/40 backdrop-blur-xl border border-white/10 p-10 rounded-3xl hover:bg-surface/60 transition-all duration-500 overflow-hidden flex flex-col items-center justify-center h-56 sm:h-64 cursor-pointer shadow-lg hover:shadow-2xl">
-        <!-- Hover Glow -->
-        <div class="absolute inset-0 bg-gradient-to-br from-[#b45bfa]/0 to-[#b45bfa]/0 group-hover:from-[#b45bfa]/5 group-hover:to-transparent transition-colors duration-500"></div>
-        <div class="absolute -inset-[1px] bg-gradient-to-r from-[#b45bfa]/50 to-[#ff4d80]/50 rounded-3xl blur-sm opacity-0 group-hover:opacity-100 transition duration-500 pointer-events-none -z-10"></div>
+      <a href="https://qryptex.in" target="_blank" rel="noopener noreferrer" class="group relative bg-surface/40 backdrop-blur-xl border border-white/10 p-10 rounded-3xl transition-all duration-500 overflow-hidden flex flex-col items-center justify-center h-56 sm:h-64 cursor-pointer shadow-lg hover:shadow-2xl hover:-translate-y-1 hover:border-white/20 hover:bg-surface/50">
+        <!-- Animated Shine -->
+        <div class="shine-effect absolute inset-0 w-2/3 h-full bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-[150%] skew-x-[-20deg] pointer-events-none z-0"></div>
 
         <span class="absolute top-6 left-8 text-[10px] uppercase tracking-[0.25em] text-[#b45bfa] font-bold opacity-80 group-hover:opacity-100 transition-opacity">Platform Partner</span>
         

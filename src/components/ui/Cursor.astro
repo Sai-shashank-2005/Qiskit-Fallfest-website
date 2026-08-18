@@ -1,0 +1,109 @@
+---
+// Custom Cursor Component
+---
+
+<div id="custom-cursor" class="pointer-events-none fixed top-0 left-0 z-[9999] hidden md:block mix-blend-difference">
+  <!-- The small dot -->
+  <div id="cursor-dot" class="absolute -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-white rounded-full transition-transform duration-100 ease-out"></div>
+  
+  <!-- The trailing circle -->
+  <div id="cursor-ring" class="absolute -translate-x-1/2 -translate-y-1/2 w-8 h-8 border border-white/50 rounded-full transition-all duration-300 ease-out flex items-center justify-center">
+    <!-- Click text that appears on certain hover states (optional) -->
+    <span id="cursor-text" class="text-[5px] uppercase font-bold tracking-widest text-white opacity-0 transition-opacity duration-300"></span>
+  </div>
+</div>
+
+<style>
+  /* Hide default cursor on desktop when this component is active */
+  @media (pointer: fine) {
+    html {
+      cursor: none !important;
+    }
+    
+    /* Ensure elements don't show default pointer */
+    a, button, input, [role="button"] {
+      cursor: none !important;
+    }
+  }
+
+  /* When hovering over interactive elements, we can add a class to body to change cursor style */
+  body.hovering-link #cursor-dot {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  
+  body.hovering-link #cursor-ring {
+    width: 48px;
+    height: 48px;
+    background-color: white;
+    mix-blend-mode: difference;
+    border-color: transparent;
+  }
+</style>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Only initialize on devices with a fine pointer (mouse)
+    if (window.matchMedia('(pointer: fine)').matches) {
+      const cursorDot = document.getElementById('cursor-dot');
+      const cursorRing = document.getElementById('cursor-ring');
+      
+      let mouseX = 0;
+      let mouseY = 0;
+      let ringX = 0;
+      let ringY = 0;
+      
+      // Update mouse coordinates
+      document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        
+        // Update dot position immediately
+        if (cursorDot) {
+          cursorDot.style.left = `${mouseX}px`;
+          cursorDot.style.top = `${mouseY}px`;
+        }
+      });
+      
+      // Smooth animation for the trailing ring
+      const render = () => {
+        // Interpolate the ring position towards the mouse position
+        ringX += (mouseX - ringX) * 0.15;
+        ringY += (mouseY - ringY) * 0.15;
+        
+        if (cursorRing) {
+          cursorRing.style.transform = `translate(calc(-50% + ${ringX}px), calc(-50% + ${ringY}px))`;
+        }
+        
+        requestAnimationFrame(render);
+      };
+      
+      requestAnimationFrame(render);
+      
+      // Handle interactive element hover states
+      const interactiveElements = document.querySelectorAll('a, button, input, [role="button"], .group');
+      
+      interactiveElements.forEach(el => {
+        el.addEventListener('mouseenter', () => {
+          document.body.classList.add('hovering-link');
+        });
+        
+        el.addEventListener('mouseleave', () => {
+          document.body.classList.remove('hovering-link');
+        });
+      });
+      
+      // Hide cursor when leaving window
+      document.addEventListener('mouseout', (e) => {
+        if (!e.relatedTarget) {
+          if (cursorDot) cursorDot.style.opacity = '0';
+          if (cursorRing) cursorRing.style.opacity = '0';
+        }
+      });
+      
+      document.addEventListener('mouseover', () => {
+        if (cursorDot) cursorDot.style.opacity = '1';
+        if (cursorRing) cursorRing.style.opacity = '1';
+      });
+    }
+  });
+</script>

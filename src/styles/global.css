@@ -11,9 +11,30 @@
     overflow-x: hidden;
   }
   body {
-    @apply bg-bg text-text font-sans antialiased transition-colors duration-500;
+    @apply bg-bg text-text font-sans antialiased;
     overflow-x: hidden;
   }
+  
+  /* Disable CSS transitions during the View Transition to prevent flickering */
+  .theme-transition,
+  .theme-transition *,
+  .theme-transition *:before,
+  .theme-transition *:after {
+    transition: none !important;
+  }
+}
+
+/* View Transitions for Theme Toggle */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+::view-transition-old(root) {
+  z-index: 1;
+}
+::view-transition-new(root) {
+  z-index: 2;
 }
 
 /* Custom Webkit Scrollbar */

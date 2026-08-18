@@ -1,0 +1,22 @@
+:root {
+  /* System preference defaults to dark, or light if specified */
+  --color-bg: #f8fafc;
+  --color-surface: #ffffff;
+  --color-text: #0f172a;
+  --color-text-muted: #64748b;
+  --color-primary: #f4b8da; /* Pastel pink */
+  --color-quantum: #c4b5fd; /* Pastel purple */
+  --color-lavender: #e0e7ff;
+  --color-border: #e2e8f0;
+}
+
+[data-theme='dark'] {
+  --color-bg: #020617; /* Deep midnight/navy */
+  --color-surface: #0f172a;
+  --color-text: #f8fafc;
+  --color-text-muted: #94a3b8;
+  --color-primary: #ffb3b3; /* Qiskit pink accent */
+  --color-quantum: #c084fc; /* Violet/purple */
+  --color-lavender: #a78bfa;
+  --color-border: #1e293b;
+}

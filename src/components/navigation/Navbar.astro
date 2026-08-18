@@ -123,16 +123,20 @@
     const navLinks = document.querySelectorAll('.nav-link');
     const sections = Array.from(navLinks).map(link => {
       const id = link.getAttribute('href').substring(1);
+      // Map 'top' explicitly to the top of the page element
+      if (id === 'top') return document.getElementById('top') || document.body;
       return document.getElementById(id);
     }).filter(Boolean);
 
     const updateActiveLink = () => {
-      let currentSection = '';
+      let currentSection = 'top';
       
       sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        if (scrollY >= sectionTop - 150) {
-          currentSection = section.getAttribute('id');
+        // Use getBoundingClientRect to get absolute position relative to viewport
+        const rect = section.getBoundingClientRect();
+        // If the section's top crosses the top 200px threshold of the viewport
+        if (rect.top <= 200) {
+          currentSection = section.getAttribute('id') || 'top';
         }
       });
 

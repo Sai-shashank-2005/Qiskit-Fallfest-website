@@ -1,0 +1,93 @@
+---
+// RegistrationCTA component
+---
+
+<section class="py-32 relative overflow-hidden bg-bg">
+  <div class="container mx-auto px-6 max-w-7xl">
+    
+    <div class="group relative bg-surface border border-border rounded-3xl overflow-hidden shadow-xl flex flex-col md:flex-row items-center transition-all duration-700 hover:border-[#ff4d80]/30 hover:shadow-[#ff4d80]/10">
+      
+      <!-- Quantum Background Glow effect -->
+      <div class="absolute inset-0 bg-gradient-to-r from-transparent via-[#b45bfa]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000 -translate-x-full group-hover:translate-x-full ease-in-out"></div>
+
+      <!-- Content -->
+      <div class="p-12 md:p-20 relative z-10 md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6 tracking-tight text-text leading-tight">Ready to build the<br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-[#ff4d80] to-[#b45bfa]">quantum future?</span></h2>
+        <p class="text-text-muted mb-10 text-lg font-light max-w-sm">
+          Register now and be part of the next quantum computing revolution at Bharathidasan University.
+        </p>
+        
+        <a href="/register" class="relative inline-flex items-center justify-center gap-3 px-10 py-4 bg-gradient-to-r from-[#ff4d80] to-[#ff7597] text-white text-base font-semibold rounded-full overflow-hidden transition-all hover:scale-105 shadow-[0_0_30px_rgba(255,77,128,0.4)] w-max cursor-pointer mx-auto md:mx-0">
+          <span class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out rounded-full"></span>
+          <span class="relative z-10 flex items-center gap-2">Register Now <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+        </a>
+      </div>
+
+      <!-- Interactive Visual Area -->
+      <div class="relative h-80 md:h-[500px] w-full md:w-1/2 flex items-center justify-center overflow-hidden perspective-[1000px] z-0">
+        
+        <!-- Interactive 3D abstract grid -->
+        <div id="cta-interactive-grid" class="absolute right-0 top-1/2 -translate-y-1/2 w-full h-full flex items-center justify-end pr-12 transition-transform duration-300 ease-out preserve-3d rotate-y-[-15deg]">
+          
+          <!-- Quantum State Superposition Visual -->
+          <div class="relative w-64 h-64 transform rotate-x-45 rotate-z-45">
+             <!-- Orbital rings -->
+             <div class="absolute inset-0 border border-[#b45bfa]/20 rounded-full animate-[spin_10s_linear_infinite] group-hover:border-[#b45bfa]/50 transition-colors"></div>
+             <div class="absolute inset-0 border border-[#ff4d80]/20 rounded-full animate-[spin_7s_linear_infinite_reverse] scale-75 group-hover:border-[#ff4d80]/50 transition-colors"></div>
+             <div class="absolute inset-0 border border-white/10 rounded-full animate-[spin_5s_linear_infinite] scale-50 group-hover:border-white/30 transition-colors"></div>
+             
+             <!-- Particles -->
+             <div class="grid grid-cols-4 gap-2 absolute inset-0 transform translate-z-[40px]">
+               {[...Array(16)].map((_, i) => (
+                 <div class="w-full h-full bg-[#ff4d80]/10 backdrop-blur-md rounded-full border border-[#ff4d80]/20 scale-0 group-hover:scale-100 transition-all duration-700 ease-out" style={`transition-delay: ${i * 50}ms; box-shadow: 0 0 10px rgba(255,77,128,0.2)`}></div>
+               ))}
+             </div>
+          </div>
+          
+        </div>
+        
+        <!-- Hummingbird Badge -->
+        <div class="absolute left-10 md:left-20 top-1/2 -translate-y-1/2 z-20 hidden md:block drop-shadow-[0_0_30px_rgba(180,91,250,0.5)] group-hover:-translate-y-1/3 transition-transform duration-1000 ease-in-out">
+           <img 
+             src="/brand/qiskit/qiskit-badge.png" 
+             alt="Qiskit Badge" 
+             class="w-32 h-32 object-contain animate-[bounce_4s_ease-in-out_infinite]"
+           />
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+  .rotate-y-\[-15deg\] {
+    transform: rotateY(-15deg);
+  }
+  .rotate-x-45 {
+    transform: rotateX(60deg);
+  }
+  .rotate-z-45 {
+    transform: rotateX(60deg) rotateZ(45deg);
+  }
+  .translate-z-\[40px\] {
+    transform: translateZ(40px);
+  }
+</style>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const grid = document.getElementById('cta-interactive-grid');
+    if (grid && window.innerWidth > 768) {
+      document.addEventListener('mousemove', (e) => {
+        const x = (e.clientX / window.innerWidth - 0.5) * 20;
+        const y = (e.clientY / window.innerHeight - 0.5) * 20;
+        grid.style.transform = `rotateY(${-15 + x}deg) rotateX(${-y}deg)`;
+      });
+    }
+  });
+</script>

@@ -2,13 +2,31 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Navbar from '../components/navigation/Navbar.astro';
 import Hero from '../components/hero/Hero.astro';
+import WhyFallFest from '../components/event/WhyFallFest.astro';
+import SessionTimeline from '../components/timeline/SessionTimeline.astro';
+import HighlightGrid from '../components/event/HighlightGrid.astro';
+import SpeakersSection from '../components/people/SpeakersSection.astro';
+import OrganizersSection from '../components/people/OrganizersSection.astro';
+import SponsorSection from '../components/sponsors/SponsorSection.astro';
+import RegistrationCTA from '../components/ui/RegistrationCTA.astro';
+import AboutSection from '../components/about/AboutSection.astro';
+import FAQAccordion from '../components/faq/FAQAccordion.astro';
+import Footer from '../components/layout/Footer.astro';
 ---
 
 <BaseLayout>
   <Navbar />
   <main class="flex-grow">
     <Hero />
-    <!-- Other sections will be added here -->
+    <WhyFallFest />
+    <SessionTimeline />
+    <HighlightGrid />
+    <SpeakersSection />
+    <OrganizersSection />
+    <RegistrationCTA />
+    <SponsorSection />
+    <AboutSection />
+    <FAQAccordion />
   </main>
-  <!-- <Footer /> -->
+  <Footer />
 </BaseLayout>

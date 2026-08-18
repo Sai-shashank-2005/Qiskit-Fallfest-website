@@ -1,0 +1,51 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/navigation/Navbar.astro';
+import Footer from '../components/layout/Footer.astro';
+---
+
+<BaseLayout title="Register | Qiskit Fall Fest 2026">
+  <Navbar />
+  <main class="flex-grow pt-32 pb-24 bg-bg min-h-screen">
+    <div class="container mx-auto px-6 max-w-lg">
+      <div class="text-center mb-10">
+        <h1 class="text-4xl font-bold mb-4 tracking-tight">Register</h1>
+        <p class="text-text-muted">Secure your spot at Qiskit Fall Fest 2026.</p>
+      </div>
+      
+      <div class="bg-surface border border-border p-8 rounded-2xl shadow-xl">
+        <form class="space-y-6">
+          <div>
+            <label for="name" class="block text-sm font-medium mb-2">Full Name</label>
+            <input type="text" id="name" class="w-full bg-bg border border-border rounded-lg px-4 py-3 text-text focus:outline-none focus:border-primary transition-colors" placeholder="Jane Doe" required />
+          </div>
+          
+          <div>
+            <label for="email" class="block text-sm font-medium mb-2">Email Address</label>
+            <input type="email" id="email" class="w-full bg-bg border border-border rounded-lg px-4 py-3 text-text focus:outline-none focus:border-primary transition-colors" placeholder="jane@example.com" required />
+          </div>
+          
+          <div>
+            <label for="university" class="block text-sm font-medium mb-2">University / Organization</label>
+            <input type="text" id="university" class="w-full bg-bg border border-border rounded-lg px-4 py-3 text-text focus:outline-none focus:border-primary transition-colors" placeholder="Bharathidasan University" required />
+          </div>
+          
+          <div>
+            <label for="role" class="block text-sm font-medium mb-2">Role</label>
+            <select id="role" class="w-full bg-bg border border-border rounded-lg px-4 py-3 text-text focus:outline-none focus:border-primary transition-colors" required>
+              <option value="student">Student</option>
+              <option value="researcher">Researcher</option>
+              <option value="faculty">Faculty</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          
+          <button type="button" class="w-full py-4 bg-primary text-bg font-bold rounded-lg hover:opacity-90 transition-opacity mt-4">
+            Submit Registration
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>

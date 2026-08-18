@@ -1,22 +1,21 @@
 :root {
-  /* System preference defaults to dark, or light if specified */
-  --color-bg: #f8fafc;
-  --color-surface: #ffffff;
-  --color-text: #0f172a;
-  --color-text-muted: #64748b;
-  --color-primary: #f4b8da; /* Pastel pink */
-  --color-quantum: #c4b5fd; /* Pastel purple */
+  --color-bg: #ffffff;
+  --color-surface: #fdfdfd;
+  --color-text: #0b0f19;
+  --color-text-muted: #4b5563;
+  --color-primary: #ff4d80;
+  --color-quantum: #b45bfa;
   --color-lavender: #e0e7ff;
   --color-border: #e2e8f0;
 }
 
 [data-theme='dark'] {
-  --color-bg: #020617; /* Deep midnight/navy */
-  --color-surface: #0f172a;
+  --color-bg: #090812; 
+  --color-surface: #0e0d19;
   --color-text: #f8fafc;
   --color-text-muted: #94a3b8;
-  --color-primary: #ffb3b3; /* Qiskit pink accent */
-  --color-quantum: #c084fc; /* Violet/purple */
+  --color-primary: #ff4d80; 
+  --color-quantum: #b45bfa; 
   --color-lavender: #a78bfa;
-  --color-border: #1e293b;
+  --color-border: #211f38;
 }

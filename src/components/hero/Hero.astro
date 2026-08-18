@@ -2,55 +2,175 @@
 // Hero component
 ---
 
-<section class="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden">
+<section class="relative w-full min-h-screen flex items-center pt-24 pb-32 overflow-hidden bg-bg">
   
-  <!-- Background Quantum Visuals (Static fallback/structure) -->
-  <div class="absolute inset-0 z-0 pointer-events-none opacity-50">
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-quantum/20 rounded-full animate-spin-slow"></div>
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-quantum/30 rounded-full animate-spin-slow" style="animation-direction: reverse; animation-duration: 18s;"></div>
-    <!-- Radial gradient for depth -->
-    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-quantum/5 via-transparent to-transparent"></div>
+  <!-- Subtle background grid -->
+  <div class="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+
+  <div class="container mx-auto px-6 relative z-10 w-full">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-0 items-center">
+      
+      <!-- Text Content (Left Column) -->
+      <div class="max-w-xl relative z-20 w-full pt-12 lg:pt-0 flex flex-col items-center lg:items-start text-center lg:text-left">
+        <div class="flex items-center gap-4 mb-6 animate-fade-in-up mx-auto lg:mx-0">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border bg-surface text-[10px] uppercase tracking-widest font-semibold text-text-muted backdrop-blur-sm shadow-sm">
+            OFFICIAL EVENT
+          </div>
+          <div class="h-4 w-px bg-border"></div>
+          <img src="/brand/ibm-quantum/ibm.png" alt="IBM Quantum" class="h-4 w-auto object-contain opacity-80" onerror="this.style.display='none'" />
+        </div>
+        
+        <h1 class="text-5xl md:text-6xl lg:text-7xl font-semibold leading-[1.1] mb-6 tracking-tight text-text animate-fade-in-up" style="animation-delay: 0.1s;">
+          A decade of <br />
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#ff4d80] to-[#b45bfa]">quantum</span> <br />
+          on the cloud.
+        </h1>
+        
+        <p class="text-base md:text-lg text-text-muted mb-8 leading-relaxed font-light animate-fade-in-up" style="animation-delay: 0.2s;">
+          Qiskit Fall Fest 2026 brings builders, learners and dreamers together to explore the future of quantum computing.
+        </p>
+
+        <div class="flex flex-col items-center lg:items-start gap-4 mb-10 text-sm text-text-muted font-medium animate-fade-in-up" style="animation-delay: 0.3s;">
+          <div class="flex items-center gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ff4d80" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="drop-shadow-[0_0_8px_rgba(255,77,128,0.5)]"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+            Oct 24 — Oct 25, 2026
+          </div>
+          <a href="https://www.google.com/maps/search/Bharathidasan+University" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 hover:text-[#ff4d80] transition-colors group w-max">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ff4d80" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="drop-shadow-[0_0_8px_rgba(255,77,128,0.5)]"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 0-16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span class="group-hover:underline underline-offset-4">Bharathidasan University, India</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-hover:opacity-100 transition-opacity"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+          </a>
+        </div>
+        
+        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 animate-fade-in-up w-full" style="animation-delay: 0.4s;">
+          <a href="/register" class="group relative inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-gradient-to-r from-[#ff4d80] to-[#ff7597] text-white text-sm font-semibold rounded-full overflow-hidden transition-all hover:scale-105 shadow-[0_0_20px_rgba(255,77,128,0.3)]">
+            <span class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out rounded-full"></span>
+            <span class="relative z-10 flex items-center gap-2">Register Now <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+          </a>
+          <a href="#events" class="group inline-flex items-center justify-center gap-2 px-8 py-3.5 border border-border bg-transparent hover:bg-border/50 hover:border-[#ff4d80]/30 text-text text-sm font-semibold rounded-full transition-all hover:scale-105">
+            Explore Event <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Interactive Visual Area (Right Column) -->
+      <div id="parallax-container" class="relative h-[400px] lg:h-full min-h-[400px] lg:min-h-[500px] w-full flex items-center justify-center lg:justify-end perspective-[1000px] z-10 mt-8 lg:mt-0">
+        
+        <div id="parallax-layer-1" class="absolute inset-0 flex items-center justify-center transition-transform duration-100 ease-out pointer-events-none">
+          <!-- Orbit rings -->
+          <div class="absolute w-[350px] lg:w-[600px] h-[350px] lg:h-[600px] border-[0.5px] border-[#b45bfa]/20 rounded-full animate-[spin_40s_linear_infinite]">
+            <div class="absolute top-0 left-1/2 w-2 h-2 bg-[#b45bfa] rounded-full shadow-[0_0_10px_#b45bfa] -translate-x-1/2 -translate-y-1/2"></div>
+          </div>
+          <div class="absolute w-[250px] lg:w-[450px] h-[250px] lg:h-[450px] border-[0.5px] border-[#ff4d80]/20 rounded-full animate-[spin_25s_linear_infinite_reverse]">
+            <div class="absolute bottom-0 left-1/2 w-2 h-2 bg-[#ff4d80] rounded-full shadow-[0_0_10px_#ff4d80] -translate-x-1/2 translate-y-1/2"></div>
+          </div>
+        </div>
+        
+        <div id="parallax-layer-2" class="relative z-10 flex items-center justify-center transition-transform duration-100 ease-out pointer-events-none">
+          <!-- Interactive 3D Quantum Cubes Array -->
+          <div class="relative w-48 h-48 md:w-64 md:h-64 lg:w-96 lg:h-96 transform rotate-x-60 rotate-z-45 preserve-3d">
+            
+            <!-- Central glowing node with Qiskit Logo -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 lg:w-48 lg:h-48 bg-[radial-gradient(circle,_var(--tw-gradient-stops))] from-[#ff4d80]/30 to-transparent blur-3xl z-0"></div>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 transform -rotate-z-45 -rotate-x-60 drop-shadow-[0_0_20px_rgba(180,91,250,0.6)]">
+               <img src="/brand/qiskit/Qiskit-Logo.png" alt="Qiskit" class="w-24 lg:w-36 h-auto object-contain" onerror="this.style.display='none'" />
+            </div>
+
+            <!-- Isometric Cube Grid Base Layer -->
+            <div class="grid grid-cols-3 gap-2 lg:gap-4 absolute inset-0 transform translate-z-[10px] lg:translate-z-[20px]">
+              {[...Array(9)].map((_, i) => (
+                <div class="w-full h-full border border-white/10 bg-gradient-to-br from-[#b45bfa]/20 to-[#ff4d80]/20 backdrop-blur-md shadow-[inset_0_0_15px_rgba(255,255,255,0.05)] transition-all duration-500 animate-[pulse_4s_ease-in-out_infinite]" style={`animation-delay: ${i * 0.2}s`}></div>
+              ))}
+            </div>
+
+            <!-- Isometric Cube Grid Top Layer -->
+            <div class="grid grid-cols-3 gap-2 lg:gap-4 absolute inset-0 transform translate-z-[40px] lg:translate-z-[80px] scale-90">
+              {[...Array(9)].map((_, i) => (
+                i % 2 !== 0 ? <div class="w-full h-full border border-[#ff4d80]/40 bg-[#ff4d80]/10 backdrop-blur-md shadow-[0_0_20px_rgba(255,77,128,0.3)] animate-[pulse_3s_ease-in-out_infinite]" style={`animation-delay: ${i * 0.4}s`}></div> : <div></div>
+              ))}
+            </div>
+          </div>
+        </div>
+        
+        <!-- Hummingbird / Qiskit Badge (Parallax layer 3) -->
+        <div id="parallax-layer-3" class="hidden lg:block absolute lg:bottom-16 lg:right-8 xl:right-16 z-30 transition-transform duration-100 ease-out">
+          <img 
+            src="/brand/qiskit/qiskit-badge.png" 
+            alt="Qiskit Fall Fest Badge" 
+            class="w-40 h-40 object-contain hover:scale-110 transition-transform duration-500 drop-shadow-2xl"
+            onerror="this.style.display='none'"
+          />
+        </div>
+      </div>
+      
+    </div>
   </div>
 
-  <div class="container mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-12 items-center">
-    
-    <!-- Text Content -->
-    <div class="max-w-2xl">
-      <div class="inline-flex items-center gap-2 px-3 py-1 mb-6 rounded-full border border-border bg-surface/50 backdrop-blur text-sm font-medium">
-        <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-        Official Event Designation
-      </div>
-      
-      <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6 tracking-tight">
-        A decade of <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-quantum">quantum</span> on the cloud.
-      </h1>
-      
-      <p class="text-xl text-text-muted mb-8 leading-relaxed max-w-lg">
-        Qiskit Fall Fest 2026. Join us at Bharathidasan University for a premium technical conference exploring the future of quantum computing.
-      </p>
-      
-      <div class="flex flex-wrap items-center gap-4">
-        <a href="/register" class="px-8 py-4 bg-primary text-bg font-semibold rounded hover:opacity-90 transition-all shadow-[0_0_20px_rgba(var(--color-primary),0.3)]">
-          Register Now
-        </a>
-        <a href="#events" class="px-8 py-4 border border-border bg-surface/50 backdrop-blur rounded hover:bg-surface transition-all font-medium">
-          Explore Event
-        </a>
-      </div>
-    </div>
-    
-    <!-- Visual / Badge -->
-    <div class="relative flex justify-center items-center">
-      <div class="relative w-full max-w-md aspect-square flex items-center justify-center">
-        <!-- Event Badge Image -->
-        <img 
-          src="/brand/qiskit/qiskit-badge.png" 
-          alt="Qiskit Fall Fest Badge" 
-          class="w-64 h-64 object-contain drop-shadow-2xl z-10"
-          onerror="this.src='/brand/qiskit/Fall Fest Sticker Small.png'"
-        />
-      </div>
-    </div>
-    
+  <!-- Curved SVG Separator (Matching the example image design) -->
+  <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none pointer-events-none z-20 translate-y-px">
+    <svg class="relative block w-full h-[60px] md:h-[120px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <!-- The path uses the surface color to blend into the next section -->
+      <path d="M0,0 C300,120 900,120 1200,0 L1200,120 L0,120 Z" class="fill-surface"></path>
+    </svg>
   </div>
 </section>
+
+<style>
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+  .rotate-x-60 {
+    transform: rotateX(60deg);
+  }
+  .rotate-z-45 {
+    transform: rotateX(60deg) rotateZ(45deg);
+  }
+  .translate-z-\[20px\] {
+    transform: translateZ(20px);
+  }
+  .translate-z-\[80px\] {
+    transform: translateZ(80px);
+  }
+  
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .animate-fade-in-up {
+    animation: fade-in-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    opacity: 0;
+  }
+</style>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('parallax-container');
+    const layer1 = document.getElementById('parallax-layer-1');
+    const layer2 = document.getElementById('parallax-layer-2');
+    const layer3 = document.getElementById('parallax-layer-3');
+
+    if (container && window.innerWidth > 1024) {
+      container.addEventListener('mousemove', (e) => {
+        const { left, top, width, height } = container.getBoundingClientRect();
+        const x = (e.clientX - left - width / 2) / 30;
+        const y = (e.clientY - top - height / 2) / 30;
+
+        layer1.style.transform = `translate(${x * -0.5}px, ${y * -0.5}px)`;
+        layer2.style.transform = `translate(${x * 1.2}px, ${y * 1.2}px)`;
+        layer3.style.transform = `translate(${x * 2.0}px, ${y * 2.0}px)`;
+      });
+
+      container.addEventListener('mouseleave', () => {
+        layer1.style.transform = `translate(0px, 0px)`;
+        layer2.style.transform = `translate(0px, 0px)`;
+        layer3.style.transform = `translate(0px, 0px)`;
+      });
+    }
+  });
+</script>

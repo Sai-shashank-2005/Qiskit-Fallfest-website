@@ -5,11 +5,15 @@ export const faqs = [
   },
   {
     question: "Is registration free?",
-    answer: "Yes, registration is completely free, thanks to our sponsors and Bharathidasan University."
+    answer: "No, there is a registration fee to attend the event. Please check the registration portal for detailed pricing information."
+  },
+  {
+    question: "Will accommodation be provided?",
+    answer: "No, accommodation will not be provided. Participants are responsible for making their own stay arrangements."
   },
   {
     question: "What should participants bring?",
-    answer: "Bring a laptop with Python installed for the hands-on workshops. A notebook and curiosity are highly recommended!"
+    answer: "A laptop is strictly mandatory for Day 2 to participate in the hands-on workshops and hackathon. Please ensure it is charged and has Python installed."
   },
   {
     question: "Will certificates be provided?",

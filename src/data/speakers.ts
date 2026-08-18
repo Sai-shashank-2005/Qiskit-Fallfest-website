@@ -4,28 +4,16 @@ export type Speaker = {
   role: string;
   organization: string;
   image: string;
+  linkedin?: string;
 };
 
 export const speakers: Speaker[] = [
   {
     id: "sp1",
-    name: "Dr. Sarah Kaiser",
-    role: "Research Scientist",
-    organization: "IBM Quantum",
-    image: "/speakers/sarah.jpg"
-  },
-  {
-    id: "sp2",
-    name: "Dr. Jay Gambetta",
-    role: "Fellow",
-    organization: "IBM Quantum",
-    image: "/speakers/jay.jpg"
-  },
-  {
-    id: "sp3",
-    name: "Prof. M. Sasikumar",
-    role: "Professor",
-    organization: "IIT Madras",
-    image: "/speakers/sasikumar.jpg"
+    name: "Jayakumar Vaithiyashankar, PhD",
+    role: "Founder / CEO",
+    organization: "Anuthantra | IBM Quantum Educator",
+    image: "/speakers/placeholder.jpg",
+    linkedin: "https://www.linkedin.com/in/jayakumar-vaithiyashankar/"
   }
 ];

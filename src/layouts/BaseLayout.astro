@@ -24,20 +24,25 @@ const {
     <title>{title}</title>
     <meta name="title" content={title} />
     <meta name="description" content={description} />
+    <meta name="keywords" content="Quantum Computing, Qiskit, Fall Fest 2026, Bharathidasan University, IBM Quantum, Hackathon, Event" />
+    <meta name="author" content="Qiskit Fall Fest Organizers" />
+    <meta name="theme-color" content="#b45bfa" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <link rel="canonical" href={Astro.url} />
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={Astro.url} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <!-- <meta property="og:image" content={new URL(image, Astro.url)} /> -->
+    <meta property="og:image" content={new URL('/brand/qiskit/qiskit-badge.png', Astro.url)} />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={Astro.url} />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
-    <!-- <meta property="twitter:image" content={new URL(image, Astro.url)} /> -->
+    <meta property="twitter:image" content={new URL('/brand/qiskit/qiskit-badge.png', Astro.url)} />
 
     <script is:inline>
       const theme = (() => {

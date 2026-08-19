@@ -13,7 +13,7 @@ export const speakers: Speaker[] = [
     name: "Jayakumar Vaithiyashankar, PhD",
     role: "Founder / CEO",
     organization: "Anuthantra | IBM Quantum Educator",
-    image: "/speakers/placeholder.jpg",
+    image: "/speakers/speaker.png",
     linkedin: "https://www.linkedin.com/in/jayakumar-vaithiyashankar/"
   }
 ];

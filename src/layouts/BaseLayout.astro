@@ -10,10 +10,42 @@ const {
   title = "Qiskit Fall Fest 2026 | Bharathidasan University", 
   description = "A decade of quantum on the cloud. Join us at Bharathidasan University for Qiskit Fall Fest 2026."
 } = Astro.props;
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Qiskit Fall Fest 2026",
+  "description": description,
+  "startDate": "2026-10-01T09:00:00+05:30",
+  "endDate": "2026-10-02T18:00:00+05:30",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "location": {
+    "@type": "Place",
+    "name": "Bharathidasan University",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Tiruchirappalli",
+      "addressRegion": "Tamil Nadu",
+      "addressCountry": "IN"
+    }
+  },
+  "image": [
+    new URL('/brand/qiskit/qiskit-badge.png', Astro.url).toString()
+  ],
+  "organizer": {
+    "@type": "Organization",
+    "name": "Qiskit Fall Fest Organizers"
+  },
+  "sponsor": {
+    "@type": "Organization",
+    "name": "Qryptex"
+  }
+};
 ---
 
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="dark" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -43,6 +75,12 @@ const {
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={new URL('/brand/qiskit/qiskit-badge.png', Astro.url)} />
+
+    <!-- Robots -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 
     <script is:inline>
       const theme = (() => {

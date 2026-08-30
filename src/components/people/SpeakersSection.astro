@@ -22,7 +22,7 @@ import { speakers } from '../../data/speakers';
               {speaker.image && speaker.image.includes('placeholder') ? (
                 <span>Photo</span>
               ) : (
-                <img src={speaker.image} alt={speaker.name} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" onerror="this.style.display='none';" />
+                <img src={speaker.image} alt={speaker.name} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async" onerror="this.style.display='none';" />
               )}
             </div>
           </div>

@@ -55,6 +55,11 @@ const structuredData = {
     <!-- Primary Meta Tags -->
     <title>{title}</title>
     <meta name="title" content={title} />
+    
+    <!-- Preload Critical Assets -->
+    <link rel="preload" as="image" href="/brand/qiskit/qiskit-badge.png" />
+    <link rel="preload" as="image" href="/brand/ibm-quantum/ibm.png" />
+
     <meta name="description" content={description} />
     <meta name="keywords" content="Quantum Computing, Qiskit, Fall Fest 2026, Bharathidasan University, IBM Quantum, Hackathon, Event" />
     <meta name="author" content="Qiskit Fall Fest Organizers" />
@@ -80,7 +85,7 @@ const structuredData = {
     <meta name="robots" content="index, follow" />
 
     <!-- Structured Data (JSON-LD) -->
-    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(structuredData)} />
 
     <script is:inline>
       const theme = (() => {
@@ -96,6 +101,9 @@ const structuredData = {
     </script>
   </head>
   <body class="min-h-screen flex flex-col">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-primary focus:text-white focus:rounded-md focus:outline-none focus:ring-4 focus:ring-primary/50 transition-all font-semibold">
+      Skip to main content
+    </a>
     <div id="top"></div>
     <slot />
   </body>

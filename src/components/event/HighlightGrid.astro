@@ -23,7 +23,7 @@ import { highlights } from '../../data/highlights';
         const color = colors[index % 3];
         
         return (
-          <div class="glow-card group relative p-8 rounded-[2rem] bg-surface/40 backdrop-blur-md border border-white/5 flex flex-col items-center text-center overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 hover:border-white/10 hover:bg-surface/60" data-color={color.light}>
+          <div class="glow-card group relative p-8 rounded-[2rem] bg-surface backdrop-blur-md border border-border/50 flex flex-col items-center text-center overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 hover:border-border" data-color={color.light}>
             
             <div class="glow-overlay absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100 pointer-events-none z-0"></div>
             

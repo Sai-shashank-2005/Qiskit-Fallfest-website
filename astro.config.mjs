@@ -6,4 +6,8 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   integrations: [tailwind(), sitemap()],
   site: process.env.PUBLIC_SITE_URL || 'https://fallfest.qryptex.in',
+  prefetch: {
+    prefetchAll: true,
+    defaultStrategy: 'hover'
+  }
 });

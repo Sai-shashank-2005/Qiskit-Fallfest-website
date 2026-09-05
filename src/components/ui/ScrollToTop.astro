@@ -28,14 +28,10 @@
       
       // Scroll to top smoothly
       scrollBtn.addEventListener('click', () => {
-        if (window.lenis) {
-          window.lenis.scrollTo(0);
-        } else {
-          window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-          });
-        }
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
       });
     }
   });

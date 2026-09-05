@@ -11,13 +11,18 @@
     <div class="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
       
       <div class="max-w-xl relative z-20 w-full pt-12 lg:pt-0 flex flex-col items-center lg:items-start text-center lg:text-left">
-        <div class="flex items-center justify-center lg:justify-start gap-4 mb-8 animate-fade-in-up">
+        <div class="mb-8 animate-fade-in-up flex justify-center lg:justify-start w-full">
+          <div class="relative group cursor-pointer inline-flex items-center justify-center p-4 sm:p-6 bg-white dark:bg-white/5 border border-border/50 rounded-2xl shadow-lg backdrop-blur-md transition-all duration-500 hover:shadow-[0_0_30px_rgba(255,77,128,0.2)] hover:border-[#ff4d80]/50">
+             <div class="absolute inset-0 bg-gradient-to-r from-[#ff4d80] to-[#b45bfa] blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500 rounded-2xl"></div>
+             <img src="/event/materials/ibm.png" alt="IBM Quantum" class="relative h-12 sm:h-16 md:h-20 w-auto object-contain dark:brightness-200 dark:invert group-hover:scale-105 transition-transform duration-500" fetchpriority="high" loading="eager" decoding="async" onerror="this.style.display='none'" />
+          </div>
+        </div>
+        
+        <div class="flex items-center justify-center lg:justify-start gap-4 mb-8 animate-fade-in-up" style="animation-delay: 0.05s;">
           <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-border/50 bg-surface/50 text-[10px] uppercase tracking-widest font-bold text-text-muted backdrop-blur-md shadow-sm">
             <span class="w-2 h-2 rounded-full bg-gradient-to-r from-[#ff4d80] to-[#b45bfa] animate-pulse"></span>
             OFFICIAL EVENT
           </div>
-          <div class="h-4 w-px bg-border"></div>
-          <img src="/event/materials/ibm.png" alt="IBM Quantum" class="h-8 md:h-10 w-auto object-contain dark:invert drop-shadow-[0_0_12px_rgba(255,77,128,0.4)]" fetchpriority="high" loading="eager" decoding="async" onerror="this.style.display='none'" />
         </div>
         
         <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-[6.5rem] font-extrabold leading-[1.05] mb-6 tracking-tight text-text animate-fade-in-up uppercase" style="animation-delay: 0.1s;">

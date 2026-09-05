@@ -11,13 +11,16 @@
     <div class="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
       
       <div class="max-w-xl relative z-20 w-full pt-12 lg:pt-0 flex flex-col items-center lg:items-start text-center lg:text-left">
+        <!-- Soft background glow for the text area -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-br from-[#ff4d80]/10 to-[#b45bfa]/10 blur-[80px] -z-10 rounded-full pointer-events-none"></div>
+        
         <div class="mb-8 animate-fade-in-up flex justify-center lg:justify-start w-full">
-          <img src="/event/materials/ibm.png" alt="IBM Quantum" class="h-14 sm:h-16 md:h-20 w-auto object-contain dark:brightness-200 dark:invert drop-shadow-xl hover:scale-105 transition-transform duration-500" fetchpriority="high" loading="eager" decoding="async" onerror="this.style.display='none'" />
+          <img src="/event/materials/ibm.png" alt="IBM Quantum" class="h-14 sm:h-16 md:h-20 w-auto object-contain dark:brightness-200 dark:invert drop-shadow-[0_0_15px_rgba(255,255,255,0.1)] hover:scale-105 transition-transform duration-500" fetchpriority="high" loading="eager" decoding="async" onerror="this.style.display='none'" />
         </div>
         
-        <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-[6.5rem] font-extrabold leading-[1.05] mb-6 tracking-tight text-text animate-fade-in-up uppercase" style="animation-delay: 0.1s;">
+        <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-[6.5rem] font-extrabold leading-[1.05] mb-6 tracking-tight text-text animate-fade-in-up uppercase drop-shadow-lg" style="animation-delay: 0.1s;">
           Qiskit <br />
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#ff4d80] to-[#b45bfa]">Fall Fest</span> <br />
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#ff4d80] to-[#b45bfa] drop-shadow-[0_0_20px_rgba(255,77,128,0.3)]">Fall Fest</span> <br />
           2026
         </h1>
         
@@ -25,23 +28,23 @@
           <p class="text-xl md:text-2xl font-medium text-text-muted tracking-wide max-w-lg mb-2">
             A decade of quantum on the cloud.
           </p>
-          <a href="https://www.google.com/maps/search/Bharathidasan+University" target="_blank" rel="noopener noreferrer" class="text-sm md:text-base text-text-muted font-light tracking-wide hover:text-white transition-colors flex items-center gap-2 group">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[#ff4d80] group-hover:-translate-y-0.5 transition-transform"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <a href="https://www.google.com/maps/search/Bharathidasan+University" target="_blank" rel="noopener noreferrer" class="text-sm md:text-base text-text-muted font-light tracking-wide hover:text-[#ff4d80] transition-colors flex items-center gap-2 group">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[#ff4d80] group-hover:-translate-y-0.5 transition-transform"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
             Bharathidasan University, India
           </a>
-          <p class="text-sm md:text-base text-text-muted font-light tracking-wide flex items-center gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[#b45bfa]"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+          <p class="text-sm md:text-base text-text-muted font-light tracking-wide flex items-center gap-2 hover:text-[#b45bfa] transition-colors cursor-default">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[#b45bfa]"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
             Mid October, 2026
           </p>
         </div>
         
         <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 animate-fade-in-up w-full" style="animation-delay: 0.3s;">
-          <a href="#events" class="group relative inline-flex items-center justify-center px-8 py-3.5 bg-gradient-to-r from-[#ff4d80] to-[#b45bfa] text-white text-sm font-bold rounded-xl overflow-hidden transition-all hover:scale-105 shadow-[0_0_30px_rgba(180,91,250,0.3)]">
+          <a href="#events" class="group relative inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[#ff4d80] to-[#b45bfa] text-white text-base font-bold rounded-full overflow-hidden transition-all hover:scale-105 shadow-[0_0_30px_rgba(180,91,250,0.3)] hover:shadow-[0_0_40px_rgba(180,91,250,0.6)] border border-white/10">
             <span class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></span>
-            <span class="relative z-10 flex items-center gap-2">Explore Event</span>
+            <span class="relative z-10 flex items-center gap-2">Explore Event <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
           </a>
           
-          <a href="#about" class="group inline-flex items-center justify-center px-8 py-3.5 border border-border/50 bg-surface/50 backdrop-blur-sm text-text text-sm font-bold rounded-xl transition-all hover:bg-border/20 hover:border-border hover:scale-105">
+          <a href="#about" class="group inline-flex items-center justify-center px-8 py-4 border border-border/50 bg-surface/50 backdrop-blur-sm text-text text-base font-bold rounded-full transition-all hover:bg-border/20 hover:border-border hover:scale-105 shadow-sm">
             Why Fall Fest?
           </a>
         </div>
@@ -75,17 +78,29 @@
         </div>
         
         <div id="parallax-layer-3" class="relative z-30 flex items-center justify-center transition-transform duration-100 ease-out pointer-events-none">
-          <!-- Central Glow behind the Badge -->
-          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-[radial-gradient(circle,_var(--tw-gradient-stops))] from-[#b45bfa]/40 via-[#ff4d80]/10 to-transparent blur-3xl rounded-full"></div>
+          <!-- Central Glow behind the Hardware -->
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 lg:w-96 lg:h-96 bg-[radial-gradient(circle,_var(--tw-gradient-stops))] from-[#ff4d80]/30 via-[#b45bfa]/20 to-transparent blur-[60px] rounded-full"></div>
           
-          <!-- The Central Badge -->
-          <img 
-            src="/event/materials/badge-pink.svg" 
-            alt="Qiskit 2026 Fall Fest Badge" 
-            class="w-48 h-48 lg:w-72 lg:h-72 object-contain animate-[float_8s_ease-in-out_infinite_reverse] drop-shadow-[0_0_40px_rgba(180,91,250,0.5)]"
-            fetchpriority="high" loading="eager" decoding="async"
-            onerror="this.style.display='none'"
-          />
+          <div class="relative inline-block">
+            <!-- The Majestic Quantum Hardware Centerpiece -->
+            <img 
+              src="/event/materials/quantum.png" 
+              alt="Quantum Hardware" 
+              class="w-64 h-auto lg:w-[450px] object-contain drop-shadow-[0_0_50px_rgba(255,77,128,0.4)] animate-[float_6s_ease-in-out_infinite]"
+              fetchpriority="high" loading="eager" decoding="async"
+              onerror="this.style.display='none'"
+            />
+            
+            <!-- Overlay Fall Fest Badge -->
+            <div class="absolute -bottom-8 -right-4 lg:-bottom-12 lg:-right-8 z-40 animate-[float_8s_ease-in-out_infinite_reverse]">
+              <img 
+                src="/event/materials/badge-pink.svg" 
+                alt="Qiskit 2026 Fall Fest Badge" 
+                class="w-24 h-24 lg:w-36 lg:h-36 object-contain drop-shadow-[0_10px_20px_rgba(180,91,250,0.4)] hover:scale-110 transition-transform duration-500 pointer-events-auto cursor-help"
+                loading="lazy" decoding="async"
+              />
+            </div>
+          </div>
         </div>
 
       </div>

@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import ScrollToTop from '../components/ui/ScrollToTop.astro';
 
 interface Props {
   title?: string;
@@ -105,5 +106,6 @@ const structuredData = {
     </a>
     <div id="top"></div>
     <slot />
+    <ScrollToTop />
   </body>
 </html>

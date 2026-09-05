@@ -1,0 +1,38 @@
+---
+// ScrollToTop component
+---
+
+<button 
+  id="scroll-to-top" 
+  class="fixed bottom-6 right-6 z-50 p-3 bg-surface/80 backdrop-blur-md border border-border/50 text-text rounded-full shadow-lg opacity-0 invisible translate-y-4 transition-all duration-300 hover:bg-surface hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(255,77,128,0.2)] hover:border-[#ff4d80]/30 hover:text-[#ff4d80] group focus:outline-none"
+  aria-label="Scroll to top"
+>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300 group-hover:-translate-y-1"><path d="m18 15-6-6-6 6"/></svg>
+</button>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const scrollBtn = document.getElementById('scroll-to-top');
+    
+    if (scrollBtn) {
+      // Show button when scrolled down 300px
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+          scrollBtn.classList.remove('opacity-0', 'invisible', 'translate-y-4');
+          scrollBtn.classList.add('opacity-100', 'visible', 'translate-y-0');
+        } else {
+          scrollBtn.classList.add('opacity-0', 'invisible', 'translate-y-4');
+          scrollBtn.classList.remove('opacity-100', 'visible', 'translate-y-0');
+        }
+      });
+      
+      // Scroll to top smoothly
+      scrollBtn.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    }
+  });
+</script>

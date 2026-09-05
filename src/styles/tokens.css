@@ -17,5 +17,5 @@
   --color-primary: #ff4d80; 
   --color-quantum: #b45bfa; 
   --color-lavender: #a78bfa;
-  --color-border: transparent; /* Removed awkward borders in dark mode */
+  --color-border: #0a0a0f; /* Same as surface to effectively hide it without breaking tailwind opacity */
 }

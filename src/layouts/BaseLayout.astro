@@ -46,7 +46,7 @@ const structuredData = {
 ---
 
 <!DOCTYPE html>
-<html lang="en" data-theme="dark" class="scroll-smooth">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -107,5 +107,47 @@ const structuredData = {
     <div id="top"></div>
     <slot />
     <ScrollToTop />
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js" is:inline></script>
+    <script is:inline>
+      document.addEventListener('DOMContentLoaded', () => {
+        const lenis = new Lenis({
+          duration: 1.2,
+          easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+          direction: 'vertical',
+          gestureDirection: 'vertical',
+          smooth: true,
+          mouseMultiplier: 1,
+          smoothTouch: false,
+          touchMultiplier: 2,
+          infinite: false,
+        });
+
+        function raf(time) {
+          lenis.raf(time);
+          requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+
+        // Expose lenis globally for other components if needed
+        window.lenis = lenis;
+
+        // Handle anchor links for Lenis
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if (targetId && targetId !== '#') {
+              const targetElement = document.querySelector(targetId);
+              if (targetElement) {
+                lenis.scrollTo(targetElement);
+              } else if (targetId === '#top') {
+                lenis.scrollTo(0);
+              }
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>

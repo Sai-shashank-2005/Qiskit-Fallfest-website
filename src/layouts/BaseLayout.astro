@@ -31,7 +31,7 @@ const structuredData = {
     }
   },
   "image": [
-    new URL('/brand/qiskit/qiskit-badge.png', Astro.url).toString()
+    new URL('/event/materials/badge-pink.svg', Astro.url).toString()
   ],
   "organizer": {
     "@type": "Organization",
@@ -49,16 +49,15 @@ const structuredData = {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="/brand/qiskit/qiskit-badge.png" />
+    <link rel="icon" type="image/png" href="/event/materials/badge-pink.svg" />
     <meta name="generator" content={Astro.generator} />
     
     <!-- Primary Meta Tags -->
     <title>{title}</title>
     <meta name="title" content={title} />
     
-    <!-- Preload Critical Assets -->
-    <link rel="preload" as="image" href="/brand/qiskit/qiskit-badge.png" />
-    <link rel="preload" as="image" href="/brand/ibm-quantum/ibm.png" />
+    <link rel="preload" as="image" href="/event/materials/badge-pink.svg" />
+    <link rel="preload" as="image" href="/event/materials/ibm.png" />
 
     <meta name="description" content={description} />
     <meta name="keywords" content="Quantum Computing, Qiskit, Fall Fest 2026, Bharathidasan University, IBM Quantum, Hackathon, Event" />
@@ -72,14 +71,14 @@ const structuredData = {
     <meta property="og:url" content={Astro.url} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={new URL('/brand/qiskit/qiskit-badge.png', Astro.url)} />
+    <meta property="og:image" content={new URL('/event/materials/badge-pink.svg', Astro.url)} />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={Astro.url} />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={new URL('/brand/qiskit/qiskit-badge.png', Astro.url)} />
+    <meta property="twitter:image" content={new URL('/event/materials/badge-pink.svg', Astro.url)} />
 
     <!-- Robots -->
     <meta name="robots" content="index, follow" />

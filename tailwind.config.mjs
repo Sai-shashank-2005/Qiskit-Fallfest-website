@@ -5,14 +5,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        bg: 'var(--color-bg)',
-        surface: 'var(--color-surface)',
-        text: 'var(--color-text)',
-        'text-muted': 'var(--color-text-muted)',
-        primary: 'var(--color-primary)',
-        quantum: 'var(--color-quantum)',
-        lavender: 'var(--color-lavender)',
-        border: 'var(--color-border)',
+        bg: 'rgb(var(--color-bg-rgb) / <alpha-value>)',
+        surface: 'rgb(var(--color-surface-rgb) / <alpha-value>)',
+        text: 'rgb(var(--color-text-rgb) / <alpha-value>)',
+        'text-muted': 'rgb(var(--color-text-muted-rgb) / <alpha-value>)',
+        primary: 'rgb(var(--color-primary-rgb) / <alpha-value>)',
+        quantum: 'rgb(var(--color-quantum-rgb) / <alpha-value>)',
+        lavender: 'rgb(var(--color-lavender-rgb) / <alpha-value>)',
+        border: 'rgb(var(--color-border-rgb) / <alpha-value>)',
       },
     },
   },

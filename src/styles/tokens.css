@@ -1,4 +1,13 @@
 :root {
+  --color-bg-rgb: 255 255 255;
+  --color-surface-rgb: 253 253 253;
+  --color-text-rgb: 11 15 25;
+  --color-text-muted-rgb: 75 85 99;
+  --color-primary-rgb: 255 77 128;
+  --color-quantum-rgb: 180 91 250;
+  --color-lavender-rgb: 224 231 255;
+  --color-border-rgb: 226 232 240;
+
   --color-bg: #ffffff;
   --color-surface: #fdfdfd;
   --color-text: #0b0f19;
@@ -10,6 +19,15 @@
 }
 
 [data-theme='dark'] {
+  --color-bg-rgb: 3 3 5;
+  --color-surface-rgb: 10 10 15;
+  --color-text-rgb: 248 250 252;
+  --color-text-muted-rgb: 148 163 184;
+  --color-primary-rgb: 255 77 128;
+  --color-quantum-rgb: 180 91 250;
+  --color-lavender-rgb: 167 139 250;
+  --color-border-rgb: 10 10 15;
+
   --color-bg: #030305; 
   --color-surface: #0a0a0f;
   --color-text: #f8fafc;
@@ -17,5 +35,5 @@
   --color-primary: #ff4d80; 
   --color-quantum: #b45bfa; 
   --color-lavender: #a78bfa;
-  --color-border: #0a0a0f; /* Same as surface to effectively hide it without breaking tailwind opacity */
+  --color-border: #0a0a0f;
 }

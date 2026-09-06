@@ -72,17 +72,20 @@ const structuredData = {
     <meta property="og:url" content={Astro.url} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={new URL('/event/materials/badge-pink.svg', Astro.url)} />
+    <meta property="og:image" content={new URL('/event/materials/Qiskit_Fall_Fest_2026_Black.png', Astro.url)} />
+    <meta property="og:site_name" content="Qiskit Fall Fest 2026" />
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={Astro.url} />
-    <meta property="twitter:title" content={title} />
-    <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={new URL('/event/materials/badge-pink.svg', Astro.url)} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={new URL('/event/materials/Qiskit_Fall_Fest_2026_Black.png', Astro.url)} />
 
-    <!-- Robots -->
-    <meta name="robots" content="index, follow" />
+    <!-- Additional SEO & Mobile -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json" is:inline set:html={JSON.stringify(structuredData)} />

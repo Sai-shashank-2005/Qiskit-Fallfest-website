@@ -8,6 +8,6 @@ export default defineConfig({
   site: process.env.PUBLIC_SITE_URL || 'https://fallfest.qryptex.in',
   prefetch: {
     prefetchAll: true,
-    defaultStrategy: 'hover'
+    defaultStrategy: 'viewport'
   }
 });

@@ -62,3 +62,13 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #ff4d80;
 }
+
+/* Custom Text Selection */
+::selection {
+  background-color: #b45bfa;
+  color: #ffffff;
+}
+::-moz-selection {
+  background-color: #b45bfa;
+  color: #ffffff;
+}

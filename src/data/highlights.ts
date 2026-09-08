@@ -11,8 +11,8 @@ export const highlights = [
   },
   { 
     id: "h3", 
-    title: "Hackathon & Challenges", 
-    icon: `<img src="/event/materials/Sticker_06.svg" alt="Hackathon" class="w-10 h-10 object-contain drop-shadow-md group-hover:scale-110 transition-transform duration-300" />` 
+    title: "Interactive Challenges", 
+    icon: `<img src="/event/materials/Sticker_06.svg" alt="Challenges" class="w-10 h-10 object-contain drop-shadow-md group-hover:scale-110 transition-transform duration-300" />` 
   },
   { 
     id: "h4", 
@@ -21,8 +21,8 @@ export const highlights = [
   },
   { 
     id: "h5", 
-    title: "Exciting Prizes", 
-    icon: `<img src="/event/materials/Sticker_08.svg" alt="Prizes" class="w-10 h-10 object-contain drop-shadow-md group-hover:scale-110 transition-transform duration-300" />` 
+    title: "Hands-on Experience", 
+    icon: `<img src="/event/materials/Sticker_08.svg" alt="Hands-on Experience" class="w-10 h-10 object-contain drop-shadow-md group-hover:scale-110 transition-transform duration-300" />` 
   },
   { 
     id: "h6", 

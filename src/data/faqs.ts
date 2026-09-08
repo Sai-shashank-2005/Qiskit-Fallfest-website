@@ -13,10 +13,10 @@ export const faqs = [
   },
   {
     question: "What should participants bring?",
-    answer: "A laptop is strictly mandatory for Day 2 to participate in the hands-on workshops and hackathon. Please ensure it is charged and has Python installed."
+    answer: "A laptop is strictly mandatory for Day 2 to participate in the hands-on workshops and challenges. Please ensure it is charged and has Python installed."
   },
   {
     question: "Will certificates be provided?",
-    answer: "Yes, active participants who complete the workshops and hackathon challenges will receive a certificate of participation."
+    answer: "Yes, active participants who complete the workshops and interactive challenges will receive a certificate of participation."
   }
 ];

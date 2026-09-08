@@ -19,5 +19,19 @@ export const organizers = [
     role: "Co-Organizer",
     linkedin: "#",
     github: "#"
+  },
+  {
+    id: "org4",
+    name: "Sharmila Sugumar",
+    role: "Co-Organizer",
+    linkedin: "#",
+    github: "#"
+  },
+  {
+    id: "org5",
+    name: "Dinesh Kanna R",
+    role: "Co-Organizer",
+    linkedin: "#",
+    github: "#"
   }
 ];

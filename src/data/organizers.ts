@@ -3,8 +3,8 @@ export const organizers = [
     id: "org1",
     name: "Suresh Krishna R",
     role: "Lead Organizer",
-    linkedin: "#",
-    github: "#"
+    linkedin: "https://www.linkedin.com/in/sureshkrishna-r/",
+    github: "https://github.com/sureshKrishna05"
   },
   {
     id: "org2",

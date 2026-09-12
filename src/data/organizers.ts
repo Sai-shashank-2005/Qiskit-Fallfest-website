@@ -3,8 +3,8 @@ export const organizers = [
     id: "org1",
     name: "Suresh Krishna R",
     role: "Lead Organizer",
-    linkedin: "#",
-    github: "#"
+    linkedin: "https://www.linkedin.com/in/sureshkrishna-r/",
+    github: "https://github.com/sureshKrishna05"
   },
   {
     id: "org2",
@@ -16,20 +16,6 @@ export const organizers = [
   {
     id: "org3",
     name: "Elphinston A",
-    role: "Co-Organizer",
-    linkedin: "#",
-    github: "#"
-  },
-  {
-    id: "org4",
-    name: "Sharmila Sugumar",
-    role: "Co-Organizer",
-    linkedin: "#",
-    github: "#"
-  },
-  {
-    id: "org5",
-    name: "Dinesh Kanna R",
     role: "Co-Organizer",
     linkedin: "#",
     github: "#"

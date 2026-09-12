@@ -2,7 +2,7 @@
 // Hero component
 ---
 
-<section class="relative w-full min-h-screen flex items-center pt-24 pb-32 overflow-hidden bg-bg transition-colors duration-300">
+<section id="hero" class="relative w-full min-h-screen flex items-center pt-24 pb-32 overflow-hidden bg-bg transition-colors duration-300">
   
   <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:24px_24px] opacity-80"></div>
 
@@ -178,5 +178,19 @@
         if(layer4) layer4.style.transform = `translate(0px, 0px)`;
       });
     }
+
+    // Scroll to hero section on spacebar press
+    document.addEventListener('keydown', (e) => {
+      // Don't trigger if user is typing in an input
+      if (e.target.tagName.toLowerCase() === 'input' || e.target.tagName.toLowerCase() === 'textarea') return;
+      
+      if (e.code === 'Space') {
+        e.preventDefault();
+        const hero = document.getElementById('hero');
+        if (hero) {
+          hero.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    });
   });
 </script>

@@ -31,10 +31,10 @@ const isHome = pathname === '/' || pathname === '/index.html';
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="icon-sun" class="absolute transition-all duration-500 rotate-90 scale-0 opacity-0"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg>
       </button>
       
-      <div class="hidden sm:inline-flex group relative items-center justify-center gap-2 px-5 py-2 bg-gradient-to-r from-[#ff4d80] to-[#b45bfa] text-white text-xs font-semibold rounded-full overflow-hidden shadow-[0_0_15px_rgba(255,77,128,0.3)] opacity-90 cursor-not-allowed cursor-default">
-        <span class="absolute inset-0 bg-white/10 rounded-full"></span>
-        <span class="relative z-10 flex items-center gap-1.5">Opens Oct 1st</span>
-      </div>
+      <a href="/register" class="hidden sm:inline-flex group relative items-center justify-center gap-2 px-5 py-2 bg-gradient-to-r from-[#ff4d80] to-[#b45bfa] text-white text-xs font-semibold rounded-full overflow-hidden shadow-[0_0_15px_rgba(255,77,128,0.3)] opacity-90 hover:opacity-100 transition-opacity">
+        <span class="absolute inset-0 bg-white/10 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+        <span class="relative z-10 flex items-center gap-1.5">Register Now</span>
+      </a>
 
       <!-- Mobile Hamburger Button -->
       <button id="mobile-menu-btn" class="md:hidden w-9 h-9 flex items-center justify-center text-text rounded-full hover:bg-surface/80 transition-colors focus:outline-none" aria-label="Open Menu">
@@ -52,9 +52,9 @@ const isHome = pathname === '/' || pathname === '/index.html';
       <a href={isHome ? "#schedule" : "/#schedule"} class="text-text-muted font-medium px-4 py-3 rounded-xl hover:bg-bg/50 hover:text-text transition-colors mobile-link">Schedule</a>
       <a href={isHome ? "#speakers" : "/#speakers"} class="text-text-muted font-medium px-4 py-3 rounded-xl hover:bg-bg/50 hover:text-text transition-colors mobile-link">Speakers</a>
       <a href={isHome ? "#faq" : "/#faq"} class="text-text-muted font-medium px-4 py-3 rounded-xl hover:bg-bg/50 hover:text-text transition-colors mobile-link">FAQ</a>
-      <div class="mt-2 text-center bg-gradient-to-r from-[#ff4d80] to-[#b45bfa] text-white font-semibold px-4 py-3 rounded-xl opacity-90 cursor-default">
-        Registration Opens Oct 1st
-      </div>
+      <a href="/register" class="mt-2 block text-center bg-gradient-to-r from-[#ff4d80] to-[#b45bfa] text-white font-semibold px-4 py-3 rounded-xl opacity-90 hover:opacity-100 transition-opacity">
+        Register Now
+      </a>
     </div>
   </div>
 </header>
